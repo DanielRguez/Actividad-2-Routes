@@ -9,6 +9,7 @@ import Layout from './layouts/Layaout';
 import NotFound from './pages/NotFound';
 import BlogCharacter from './pages/BlogCharacter';
 import { createContext, useState } from 'react';
+import TaskList from './components/TaskList';
 
 
 export const CharactersContext = createContext();
@@ -22,7 +23,12 @@ const App = () =>{
     return (
         <>
         
-        <CharactersContext.Provider value={{charactersList, setCharactersList}}>
+        <TaskList/>
+        </>
+
+    )
+}
+{/* <CharactersContext.Provider value={{charactersList, setCharactersList}}>
             <Navbar></Navbar>
             <Routes>
                 <Route path="/" element={<Layout/>}>
@@ -34,10 +40,5 @@ const App = () =>{
                 </Route>
                 
             </Routes>
-        </CharactersContext.Provider>
-        </>
-
-    )
-}
-
+        </CharactersContext.Provider> */}
 export default App;
